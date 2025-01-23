@@ -1,2 +1,9 @@
 *
 !.gitignore
+!cards
+!attributes
+!attributes/*
+!frames
+!frames/*
+!stars/
+!stars/*
