@@ -15,7 +15,7 @@
         <img src='{{ Storage::url("cards/$info[id]/image.png") }}' alt="{{ $info['name'] }}" class="h-[452px] mt-[10px]">
         <div class="mx-auto w-[519px] h-[168px] mt-[39px] px-2 relative">
             <span class="font-bold text-lg">
-                {{ '[' . implode('/', $info['typeline']) . ']' }}
+                [{{ implode('/', $info['typeline']) }}]
             </span>
             <p class="text-base text-justify leading-4 h-[105px]">{{ $info['desc'] }}</p>
             <div class="absolute bottom-0 right-0 left-0 px-2">

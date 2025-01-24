@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Card</title>
+    <title>{{ $card['name'] }}</title>
 </head>
 <body>
     <main class="flex justify-center items-center h-screen">
@@ -18,9 +18,11 @@
             "Normal Tuner Monster",
         ]))
             <x-monster-card :info="$card"/>
-        @elseif ($card['type'] == "Trap Card")
-            {{-- 'É uma trap' --}}
-            <x-trap-card :info="$card"/>
+        @elseif (in_array($card['type'], [
+            "Trap Card",
+            "Spell Card",
+        ]))
+            <x-backrow-card :info="$card"/>
         @endif
     </main>
 </body>
